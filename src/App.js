@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import PokemonThumbnail from "./components/PokemonThumbnail";
+
+
 function App() {
 
   const [allPokemons, setAllPokemons] = useState([])
@@ -27,7 +29,8 @@ function App() {
   
   useEffect(()=> {
     getAllPokemons()
-  }, [])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
   return(
     <div className="app-container">
